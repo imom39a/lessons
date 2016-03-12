@@ -1,0 +1,17 @@
+<link rel="include" href="date-time-card.html">
+<dom-module id="my-date-time-card">
+    <template>
+        <date-time-card class="red"></date-time-card>
+        <style>
+            .red {
+                --custom-card-color: #ff6557;
+                --custom-text-color: white;
+            }
+        </style>
+    </template>
+    <script>
+        Polymer({
+           is : "my-date-time-card"
+        });
+    </script>
+</dom-module>

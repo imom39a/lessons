@@ -1,0 +1,22 @@
+{
+  "name": "poly_03",
+  "homepage": "https://github.com/imom39a/myown",
+  "authors": [
+    "imom39a <vin.omega@gmail.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "moment": "momentjs#~2.12.0",
+    "polymer": "~1.3.1"
+  }
+}

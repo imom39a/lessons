@@ -1,0 +1,23 @@
+<dom-module id="prop-element">
+    <template>
+        <h1>[[name]]</h1>
+        <h2>[[position]]</h2>
+    </template>
+    <script>
+        Polymer({
+            is: "prop-element",
+            properties: {
+                name: String,
+                position: {
+                    type: String,
+                    reflectToAttribute: false,
+                    readOnly: false,
+                    computed: 'computedPosition(name)'
+                }
+            },
+            computedPosition: function(name){
+                return name + " -- is in boss position";
+            }
+        })
+    </script>
+</dom-module>

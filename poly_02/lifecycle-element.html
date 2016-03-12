@@ -1,0 +1,47 @@
+<dom-module id="lifecycle-element">
+    <template>
+        <button id="btn">Hello Button</button>
+    </template>
+    <script>
+        Polymer({
+            is : "lifecycle-element",
+//            created has access only to the "this" variable which just equal to document.register. Component level events can be performed here.
+            created : function (){
+                this.log("Created");
+                this.addEventListener('click',function(){
+                    this.remove();
+                });
+            },
+//            this enabled the local dom access. We can use this.$ to access local dom. like this.$.btn
+            ready : function (){
+                this.log("Ready");
+                this.ticker = setInterval(this.tick.bind(this),500);
+            },
+//            Polymer element is in the dom and changing
+            attached : function(){
+                this.log("Attached");
+            },
+//            Un mount the component
+//            Dome access will be available when the component got removed. Which mean this.$.btn will have value
+            detached : function (){
+                this.log("Detached");
+                clearInterval(this.ticker);
+            },
+            attributeChanged: function (name, oldValue, newValue){
+                console.log("%s was changed from %s to %s ", name, oldValue, newValue);
+            },
+            tick : function(){
+                this.setAttribute('data-id',Math.random());
+            },
+            updateAttribute: function(cycleName){
+                this.setAttribute('class',cycleName);
+            },
+            log : function(cycleName){
+                console.log("********* " + cycleName);
+                this.$ && console.dir(this.$.btn);
+                this.updateAttribute(cycleName);
+            }
+        });
+
+    </script>
+</dom-module>

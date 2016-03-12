@@ -1,0 +1,21 @@
+{
+  "name": "poly_02",
+  "homepage": "https://github.com/imom39a/myown",
+  "authors": [
+    "Vinoth Shanmugam <vinoth.shanmugam@ge.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "~1.3.1"
+  }
+}

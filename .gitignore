@@ -1,6 +1,6 @@
 .idea
 */.idea
-*/de_modulesi
+*/node_modules
 */dist
 */.tmp
 */.sass-cache

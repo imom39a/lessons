@@ -1,6 +1,20 @@
 /*global module:false*/
 module.exports = function(grunt) {
 
+
+  var appConfig = {
+      app: 'src',
+      dist: 'dist',
+      assets: 'src/assets',
+      protractor: 'test/protractor',    // end 2 end testing
+      jasmine: 'test/jasmine',          // unit testing
+      tmp: '.tmp'
+
+
+
+
+  };
+
   // Project configuration.
   grunt.initConfig({
     // Metadata.

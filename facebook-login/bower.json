@@ -1,18 +1,26 @@
 {
   "name": "facebook-login",
-  "description": "Polymer facebook login component",
-  "main": "index.js",
+  "version": "1.0.7",
   "authors": [
-    "Vinoth Kumar Shanmugam <vin.omega@gmail.com>"
+    "Anonymous <anonymous@example.com>"
   ],
-  "license": "ISC",
-  "homepage": "https://github.com/imom39a/myown",
-  "moduleType": [],
+  "description": "An element providing a solution to no problem in particular.",
+  "keywords": [
+    "web-component",
+    "polymer",
+    "seed"
+  ],
+  "main": "facebook-login.html",
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "homepage": "https://github.com/<USERNAME>/seed-element/",
   "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ]
+    "/.*",
+    "/test/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.2.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0"
+  }
 }

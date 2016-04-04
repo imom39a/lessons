@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.8.5",
+    "gulp-connect": "^3.2.2",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-size": "^2.1.0",
+    "gulp-vulcanize": "^4.0.0",
+    "merge-stream": "^1.0.0",
+    "run-sequence": "^1.1.5"
+  },
+  "scripts": {
+    "start": "gulp serve"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}

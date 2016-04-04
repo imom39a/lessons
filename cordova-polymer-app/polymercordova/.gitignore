@@ -1,0 +1,5 @@
+.DS_Store
+.d8_history
+node_modules
+platforms/android/
+platforms/ios/

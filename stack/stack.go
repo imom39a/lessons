@@ -2,15 +2,11 @@ package main
 
 import "fmt"
 
+type Item interface{}
+
 type Stack struct {
   items []Item
 }
-
-// func (s *Stack) Init(){
-//   if s.items == nil {
-//     s.items = make([]Item,0)
-//   }  
-// }
 
 func (s *Stack) Push(item Item) {
   s.items = append(s.items, item)  

@@ -7,31 +7,46 @@ package main
 
 import "fmt"
 
+var mem map[string][]int 
+
 func main(){
 
   fmt.Println("Towers of Hanoi problem")
 
-  source := []int{2,1}
-  helper := make([]int,0)
-  target := make([]int,0)
+  mem = make(map[string][]int)
+  
+  source := "Source"
+  helper := "Helper"
+  target := "Target"
 
-  hanoi(len(source), source, helper, target)
+  mem[source] = []int{5,4,3,2,1}  
+  mem[helper] = make([]int,0)
+  mem[target] = make([]int,0)
+
+  hanoi(len(mem[source]), source, helper, target)
+  printSnaphot()
 }
 
-func hanoi(disk int, source, helper, target []int){
-    fmt.Println(disk,source,helper,target)
+func hanoi(disk int, source, helper, target string) {        
     if disk == 0 {
-      return
+      return 
     } 
-    hanoi(disk - 1, source[:disk], target, helper)
+    hanoi(disk - 1, source,target,helper)    
     move(source, target)
-    fmt.Print("After move --> ")
-    fmt.Println(disk,source,helper,target)
-    hanoi(disk - 1, helper, source ,target)
+    hanoi(disk - 1, helper,source,target)    
 }
 
-func move(source, target []int) {
-  fmt.Println("Move one disk from", source, "to", target)
-  target = append(target, source[len(source)-1])
-  source = source[:len(source)-1]
+func move(source, target string) {
+  printSnaphot()
+  if(len(mem[source]) > 0) {
+    mem[target] = append(mem[target], mem[source][len(mem[source])-1])
+    mem[source] = mem[source][:len(mem[source])-1]
+  }
+}
+
+func printSnaphot(){  
+  fmt.Println("A -- ",mem["Source"])
+  fmt.Println("B -- ",mem["Helper"])
+  fmt.Println("C -- ",mem["Target"])
+  fmt.Println("------------")
 }

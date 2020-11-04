@@ -15,9 +15,9 @@ func main(){
   }
   
   fmt.Println(lcs(0,0))
-  // for _, v := range mem {
-  //   fmt.Println(v)
-  // }
+  for _, v := range mem {
+    fmt.Println(v)
+  }
 
 }
 

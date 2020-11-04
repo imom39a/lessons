@@ -33,7 +33,7 @@ func main() {
   i := 0
   j := 0
   str := make([]rune,0)
-  for  i < len(str1) && i < len(str2) {        
+  for  i < len(str1) && j < len(str2) {        
     if str1[i] == str2[j] {
       str = append(str, str1[i])
       i++
